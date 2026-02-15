@@ -1,23 +1,23 @@
 {
   "id": "basair",
   "name": "Basair",
-  "defaultTitle": "Basair Page",
   "template": "template.html",
   "defaultContent": "# Basair Reflection\n\n{arabic:ٱلرَّحْمَٰنِ ٱلرَّحِيمِ}\n\nWrite your reflection here...",
   "rules": {
     "headings": true,
     "markers": {
       "arabic": { "tag": "span", "class": "arabic" },
-      "b": { "tag": "strong" },
-      "i": { "tag": "em" },
-      "ayah": { "tag": "span", "class": "ayah" }
+      "para-about": { "tag": "p", "class": "p_about" },
+      "theme-color": { "tag": "span", "class": "theme_color"  },
+      "ayah": { "tag": "span", "class": "ayah" },
+      "paragraph": { "tag": "p", "class": "p" }
     }
   },
   "reference": [
-    { "key": "arabic", "syntax": "{arabic:...}", "meaning": "Arabic text (RTL + Arabic font)" },
+    { "key": "arabic", "syntax": "{arabic:...}", "meaning": "Arabic font text" },
     { "key": "ayah", "syntax": "{ayah:...}", "meaning": "Ayah / Qur’anic quote styling" },
-    { "key": "b", "syntax": "{b:...}", "meaning": "Bold text" },
-    { "key": "i", "syntax": "{i:...}", "meaning": "Italic text" },
+    { "key": "para-about", "syntax": "{p_about:...}", "meaning": "About Paragraph" },
+    { "key": "theme-color", "syntax": "{theme_color:}", "meaning": "Theme color" },
     { "key": "#", "syntax": "# Heading", "meaning": "Section heading" }
   ]
 }
