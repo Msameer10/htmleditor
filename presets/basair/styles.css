@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.75;
+  padding: 24px;
+  background: #fff;
+  color: #111;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+.pagehead { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+.title { margin: 0; font-size: 28px; }
+
+.content p { margin: 12px 0; }
+
+.arabic {
+  font-family: "Amiri", "Scheherazade New", serif;
+  font-size: 1.25em;
+  direction: rtl;
+  unicode-bidi: isolate;
+  letter-spacing: 0;
+}

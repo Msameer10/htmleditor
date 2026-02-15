@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Builder App</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__left">
+      <strong>HTML Template Editor</strong>
+      <span class="muted">— preset-driven HTML generator</span>
+    </div>
+
+    <button id="themeToggleBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme"><span id="themeIcon"></span></button>
+
+
+    <div id="saveChip" class="chip chip--idle" title="Autosave status">Saved</div>
+
+    <div class="topbar__right">
+      <label class="field">
+        <span class="field__label">Preset</span>
+        <select id="presetSelect"></select>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Draft</span>
+        <select id="draftSelect"></select>
+      </label>
+
+      <button id="newDraftBtn" title="Start a new blank draft">New</button>
+      <button id="saveAsBtn" title="Save current as a new named draft">Save As</button>
+      <button id="deleteDraftBtn" title="Delete selected draft">Delete</button>
+
+
+      <label class="field">
+        <span class="field__label">Title</span>
+        <input id="titleInput" type="text" placeholder="Page title..." />
+      </label>
+
+      <label class="field">
+        <span class="field__label">Filename</span>
+        <input id="filenameInput" type="text" placeholder="basair-page.html" />
+      </label>
+
+      <button id="downloadBtn">Download HTML</button>
+
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel">
+      <div class="panel__head">
+        <h2>Input</h2>
+        <div class="hint">
+          Markers: <code>{arabic:...}</code> <code>{b:...}</code> <code>{i:...}</code> <code># Heading</code>
+        </div>
+      </div>
+      <textarea id="sourceInput" spellcheck="false"></textarea>
+      <div id="markerSuggest" class="msuggest hidden" role="listbox" aria-label="Marker suggestions"></div>
+      <div class="refbox" id="refBox">
+        <button class="refbox__toggle" id="refToggleBtn" type="button" aria-expanded="true">
+          <span>Reference</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+
+        <div id="refBody" class="refbox__body">
+          <div id="refList" class="refbox__list"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="panel panel--editor">
+      <div class="panel__head">
+        <h2>Preview</h2>
+        <div class="hint">Live-rendered inside the preset template</div>
+      </div>
+
+      <iframe id="previewFrame" class="preview" sandbox="allow-same-origin"></iframe>
+    </section>
+  </main>
+  <footer>
+    <div class="footer"><p>Copyrights SAMEERION 2026. All Rights Reserved.</p></div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "id": "basair",
+  "name": "Basair",
+  "defaultTitle": "Basair Page",
+  "template": "template.html",
+  "defaultContent": "# Basair Reflection\n\n{arabic:ٱلرَّحْمَٰنِ ٱلرَّحِيمِ}\n\nWrite your reflection here...",
+  "rules": {
+    "headings": true,
+    "markers": {
+      "arabic": { "tag": "span", "class": "arabic" },
+      "b": { "tag": "strong" },
+      "i": { "tag": "em" },
+      "ayah": { "tag": "span", "class": "ayah" }
+    }
+  },
+  "reference": [
+    { "key": "arabic", "syntax": "{arabic:...}", "meaning": "Arabic text (RTL + Arabic font)" },
+    { "key": "ayah", "syntax": "{ayah:...}", "meaning": "Ayah / Qur’anic quote styling" },
+    { "key": "b", "syntax": "{b:...}", "meaning": "Bold text" },
+    { "key": "i", "syntax": "{i:...}", "meaning": "Italic text" },
+    { "key": "#", "syntax": "# Heading", "meaning": "Section heading" }
+  ]
+}
