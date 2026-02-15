@@ -15,9 +15,6 @@
 
     <button id="themeToggleBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme"><span id="themeIcon"></span></button>
 
-
-    <div id="saveChip" class="chip chip--idle" title="Autosave status">Saved</div>
-
     <div class="topbar__right">
       <label class="field">
         <span class="field__label">Preset</span>
@@ -53,9 +50,7 @@
     <section class="panel">
       <div class="panel__head">
         <h2>Input</h2>
-        <div class="hint">
-          Markers: <code>{arabic:...}</code> <code>{b:...}</code> <code>{i:...}</code> <code># Heading</code>
-        </div>
+        <div id="saveChip" class="chip chip--idle" title="Autosave status">Saved</div>
       </div>
       <textarea id="sourceInput" spellcheck="false"></textarea>
       <div id="markerSuggest" class="msuggest hidden" role="listbox" aria-label="Marker suggestions"></div>
